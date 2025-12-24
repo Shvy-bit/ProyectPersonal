@@ -1,0 +1,51 @@
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 10px;
+}
+
+#panel-cambio-cajero {
+    width: 100%;
+    max-width: 520px;
+}
+
+#form-cambiar-cajero .fila-detalle {
+    margin-bottom: 8px;
+}
+
+#cajero-actual {
+    min-width: 120px;
+}
+
+#lista-cajeros {
+    min-width: 220px;
+}
+
+#btn-confirmar-cambio {
+    min-width: 150px;
+}
+
+#btn-cancelar-cambio {
+    min-width: 100px;
+}
+
+#mensaje-error-cajero,
+#mensaje-ok-cajero {
+    width: 100%;
+    margin-top: 6px;
+}
+
+#panel-cambio-cajero a {
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .principal {
+        padding: 10px 5px;
+    }
+
+    #panel-cambio-cajero {
+        max-width: 100%;
+    }
+}

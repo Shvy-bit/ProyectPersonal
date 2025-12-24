@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Punto de Venta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_index.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Distribuidora de Alimentos Balanceados</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="cajeros.html">
+                    <span>Cajeros</span>
+                </a>
+                <a class="btn-menu" href="administrar.html">
+                    <span>Administrar</span>
+                </a>
+                <a class="btn-menu" href="inventarios.html">
+                    <span>Inventarios</span>
+                </a>
+                <a class="btn-menu" href="facturacion.html">
+                    <span>Facturación</span>
+                </a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            
+            <section class="tabla-venta">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>DESCRIPCIÓN</th>
+                        <th>CANT</th>
+                        <th>PRECIO UNITARIO</th>
+                        <th>PRECIO SUBTOTAL</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tabla-detalle-venta">
+                    
+                    </tbody>
+                </table>
+
+                <div class="alerta-inventario" id="alerta-inventario">
+                    <span class="mensaje-alerta">
+                        Alerta: Cantidad de productos con inventario bajo
+                    </span>
+                    <span class="numero" id="cantidad-inventario-bajo">0</span>
+                </div>
+            </section>
+
+            
+            <section class="panel-detalles">
+                <h3>DETALLES DE LA VENTA</h3>
+                
+                <div class="fila-detalle">
+                    <label>Cajero:</label>
+                    <span class="valor-num" id="cajero-activo">SIN CAJERO</span>
+                </div>
+
+                <div class="fila-detalle">
+                    <label for="num-venta">Num de venta:</label>
+                    <span class="valor-num" id="num-venta">0001</span>
+                </div>
+
+                <div class="fila-detalle">
+                    <label for="cantidad-articulos">Cantidad de artículos:</label>
+                    <span class="valor-num" id="cantidad-articulos">0</span>
+                </div>
+
+                <div class="fila-detalle">
+                    <label for="doc-cliente">RFC / NIC / RUT / RUC:</label>
+                    <input type="text" id="doc-cliente"
+                           placeholder="Documento del cliente">
+                </div>
+
+                <div class="fila-detalle">
+                    <label>Hora:</label>
+                    <span id="hora-actual">00:00:00</span>
+                </div>
+
+                <div class="fila-detalle">
+                    <label>Fecha:</label>
+                    <span id="fecha-actual">01/01/2000</span>
+                </div>
+
+                <div class="total-pagar">
+                    <label for="total-pagar">Total a pagar</label>
+                    <input type="text" id="total-pagar" value="0.00" readonly>
+                </div>
+
+                <div class="cambio">
+                    <span>Pago del cliente:</span>
+                    <input type="text" id="pago-cliente" value="">
+                </div>
+
+                <div class="cambio">
+                    <span>Cambio:</span>
+                    <span id="cambio">0.00</span>
+                </div>
+            </section>
+
+            
+            <section class="panel-inferior">
+                <div class="entrada-codigo">
+                    <label for="codigo-barras">Ingrese o escanee código</label>
+                    <input type="text" id="codigo-barras"
+                           placeholder="Código de barras">
+                </div>
+
+                <div class="entrada-cantidad">
+                    <label for="cantidad-producto">Ingrese cantidad</label>
+                    <input type="number" id="cantidad-producto" value="1" min="1">
+                </div>
+
+                <div class="panel-botones">
+                    <button type="button" id="btn-marcar-producto">
+                        Marcar producto
+                    </button>
+
+                    <a href="buscar_producto.html" id="btn-buscar-producto">
+                        F2 - Buscar producto
+                    </a>
+
+                    <button type="button" id="btn-pagar">
+                        Pagar
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>

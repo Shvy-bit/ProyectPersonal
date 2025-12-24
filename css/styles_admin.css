@@ -1,0 +1,63 @@
+
+#panel-login-admin {
+    max-width: 480px;
+    margin: 40px auto;
+}
+
+#panel-login-admin form {
+    margin-top: 10px;
+}
+
+#panel-login-admin .fila-detalle span {
+    font-size: 12px;
+}
+
+#panel-resumen-cajeros {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 480px;
+}
+
+#panel-tabla-cajeros {
+    margin-top: 10px;
+}
+
+#tabla-cajeros th,
+#tabla-cajeros td {
+    font-size: 12px;
+}
+
+
+#tabla-cajeros .btn-accion {
+    padding: 3px 6px;
+    font-size: 11px;
+    margin: 0 1px;
+}
+
+#panel-form-cajero {
+    margin-top: 10px;
+    max-width: 520px;
+}
+
+#panel-form-cajero form {
+    margin-top: 5px;
+}
+
+#panel-form-cajero .fila-detalle:last-of-type {
+    margin-bottom: 0;
+}
+
+#mensaje-error-cajero,
+#mensaje-ok-cajero {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    #panel-login-admin,
+    #panel-resumen-cajeros,
+    #panel-form-cajero {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+}

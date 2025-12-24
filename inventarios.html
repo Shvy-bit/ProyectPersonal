@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_inventarios.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Inventario de productos</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="cajeros.html"><span>Cajeros</span></a>
+                <a class="btn-menu" href="administrar.html"><span>Administrar</span></a>
+                <a class="btn-menu" href="facturacion.html"><span>Facturación</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            
+            <section class="panel" id="panel-filtros-inventario">
+                <h3 class="texto-centro margen-inferior">Filtros de inventario</h3>
+
+                <form id="form-filtros-inventario">
+                    <div class="fila-detalle">
+                        <label for="filtro-buscar-nombre">Nombre o descripción:</label>
+                        <input type="text" id="filtro-buscar-nombre" name="nombre">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="filtro-buscar-codigo">Código de barras:</label>
+                        <input type="text" id="filtro-buscar-codigo" name="codigo">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="filtro-inventario-bajo">Solo inventario bajo:</label>
+                        <input type="checkbox" id="filtro-inventario-bajo" name="bajo">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <button type="submit" class="btn-primario">
+                            Aplicar filtros
+                        </button>
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            
+            <section class="panel" id="panel-tabla-inventario">
+                <h3 class="texto-centro margen-inferior">Listado de productos</h3>
+
+                <table id="tabla-inventario">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Código de barras</th>
+                        <th>Nombre del producto</th>
+                        <th>Cantidad</th>
+                        <th>Cantidad mínima</th>
+                        <th>Precio por unidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+
+                <div class="fila-detalle margen-superior">
+                    <label>Total de productos mostrados:</label>
+                    <span class="valor-num" id="total-productos-mostrados">0</span>
+                </div>
+            </section>
+
+            
+            <section class="panel" id="panel-acciones-inventario">
+                <div class="fila-detalle">
+                    <button type="button" class="btn-primario" id="btn-agregar-producto">
+                        Agregar producto
+                    </button>
+                    <button type="button" id="btn-editar-producto">
+                        Editar producto seleccionado
+                    </button>
+                    <button type="button" id="btn-eliminar-producto">
+                        Eliminar producto seleccionado
+                    </button>
+                </div>
+
+                <div class="fila-detalle alerta alerta-info margen-superior" id="mensaje-inventario">
+                    <span>
+                        Para agregar un producto se abrirá el formulario en otra página.
+                        Para editar o eliminar, primero seleccione un producto en la tabla.
+                    </span>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/inventarios.js"></script>
+</body>
+</html>

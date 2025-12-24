@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_producto_form.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Formulario de producto</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="inventarios.html"><span>Inventarios</span></a>
+                <a class="btn-menu" href="cajeros.html"><span>Cajeros</span></a>
+                <a class="btn-menu" href="administrar.html"><span>Administrar</span></a>
+                <a class="btn-menu" href="facturacion.html"><span>Facturación</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            <section class="panel" id="panel-form-producto">
+                <h3 class="texto-centro margen-inferior" id="titulo-form-producto">
+                    Nuevo producto
+                </h3>
+
+                <form id="form-producto">
+                    <input type="hidden" id="producto-id" name="id">
+
+                    <div class="fila-detalle">
+                        <label for="producto-codigo">Código de barras:</label>
+                        <input type="text" id="producto-codigo" name="codigo" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="producto-nombre">Nombre del producto:</label>
+                        <input type="text" id="producto-nombre" name="nombre" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="producto-descripcion">Descripción:</label>
+                        <input type="text" id="producto-descripcion" name="descripcion">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="producto-cantidad">Cantidad actual:</label>
+                        <input type="number" id="producto-cantidad" name="cantidad" min="0" value="0" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="producto-minimo">Cantidad mínima:</label>
+                        <input type="number" id="producto-minimo" name="minimo" min="0" value="0" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="producto-precio">Precio por unidad:</label>
+                        <input type="number" id="producto-precio" name="precio" min="0" step="0.01" value="0.00" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="producto-estado">Estado:</label>
+                        <select id="producto-estado" name="estado">
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+
+                    <div class="fila-detalle margen-superior">
+                        <button type="submit" class="btn-primario" id="btn-guardar-producto">
+                            Guardar producto
+                        </button>
+                        <button type="button" id="btn-cancelar-producto">
+                            Cancelar
+                        </button>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-error margen-superior" id="mensaje-error-producto" style="display:none;">
+                        <span id="texto-error-producto">Error al guardar el producto.</span>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-info margen-superior" id="mensaje-ok-producto" style="display:none;">
+                        <span id="texto-ok-producto">Producto guardado correctamente.</span>
+                    </div>
+                </form>
+
+                <div class="fila-detalle margen-superior">
+                    <a href="inventarios.html">Volver al inventario</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="js/producto_form.js"></script>
+</body>
+</html>

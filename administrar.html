@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso Administrador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_admin.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Acceso de Administrador</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="cajeros.html"><span>Cajeros</span></a>
+                <a class="btn-menu" href="inventarios.html"><span>Inventarios</span></a>
+                <a class="btn-menu" href="facturacion.html"><span>Facturación</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            <section class="panel" id="panel-login-admin">
+                <h3 class="texto-centro margen-inferior">Inicio de sesión de administrador</h3>
+
+                <form id="form-login-admin">
+                    <div class="fila-detalle">
+                        <label for="admin-usuario">Usuario:</label>
+                        <input type="text" id="admin-usuario" name="usuario" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="admin-clave">Contraseña:</label>
+                        <input type="password" id="admin-clave" name="clave" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <button type="submit" class="btn-primario" id="btn-login-admin">
+                            Ingresar
+                        </button>
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-error" id="mensaje-error-login" style="display:none;">
+                        <span>Usuario o contraseña incorrectos.</span>
+                    </div>
+                </form>
+
+                <div class="fila-detalle margen-superior">
+                    <span>Al iniciar sesión correctamente se abrirá la pantalla de administración de cajeros.</span>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/administrar.js"></script>
+</body>
+</html>

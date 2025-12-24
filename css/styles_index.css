@@ -1,0 +1,207 @@
+.principal {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+}
+
+.tabla-venta {
+    grid-row: 1 / span 2;
+    border: 1px solid #aaaaaa;
+    background-color: #ffffff;
+}
+
+.tabla-venta thead th {
+    font-weight: bold;
+    height: 26px;
+}
+
+#tabla-detalle-venta tr:nth-child(even) {
+    background-color: #f5f7fb;
+}
+
+.alerta-inventario {
+    margin-top: 4px;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    background-color: #ffecec;
+    border: 1px solid #e06a6a;
+    color: #c72525;
+}
+
+.alerta-inventario .numero {
+    padding: 2px 10px;
+    background-color: red;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.panel-detalles {
+    border: 1px solid #aaaaaa;
+    background-color: #e8f3fb;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.panel-detalles h3 {
+    font-size: 13px;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.panel-detalles .fila-detalle span,
+.panel-detalles .fila-detalle input {
+    font-size: 12px;
+}
+
+.total-pagar {
+    margin-top: 10px;
+    padding-top: 6px;
+    border-top: 2px solid #000000;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#total-pagar {
+    width: 200px;
+    text-align: right;
+    padding: 6px;
+    font-size: 16px;
+}
+
+.cambio {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+#pago-cliente {
+    width: 120px;
+    text-align: right;
+}
+
+#cambio {
+    min-width: 80px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.panel-inferior {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.entrada-codigo,
+.entrada-cantidad {
+    border: 1px solid #aaaaaa;
+    background-color: #f5f5f5;
+    padding: 6px;
+    font-size: 12px;
+}
+
+.entrada-codigo label,
+.entrada-cantidad label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+#codigo-barras,
+#cantidad-producto {
+    width: 100%;
+    padding: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.panel-botones {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#btn-marcar-producto,
+#btn-pagar {
+    width: 100%;
+}
+
+#btn-pagar {
+    background-color: #6f8fdd;
+    border-color: #5066a5;
+    color: #ffffff;
+}
+
+#btn-pagar:hover {
+    background-color: #5975c4;
+}
+
+#btn-buscar-producto {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 2px;
+    border: 1px solid #8aa5c0;
+    background-color: #b4cce3;
+    color: #000000;
+    text-decoration: none;
+}
+
+#btn-buscar-producto:hover {
+    background-color: #9bb9d6;
+}
+
+@media (max-width: 1200px) {
+    .ventana {
+        width: 100%;
+        margin: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-lateral {
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-opciones {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .principal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .tabla-venta {
+        grid-row: auto;
+    }
+
+    .panel-inferior {
+        grid-template-columns: 1fr;
+    }
+}

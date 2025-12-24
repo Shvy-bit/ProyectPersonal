@@ -1,0 +1,42 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#panel-filtros-facturacion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#panel-filtros-facturacion form {
+    margin-top: 8px;
+}
+#panel-tabla-ventas {
+    margin-top: 5px;
+}
+#tabla-ventas th,
+#tabla-ventas td {
+    font-size: 12px;
+}
+
+#tabla-ventas tbody tr:hover {
+    background-color: #e1ecff;
+    cursor: pointer;
+}
+#panel-detalle-venta-seleccionada {
+    margin-top: 5px;
+}
+
+#tabla-detalle-venta-seleccionada th,
+#tabla-detalle-venta-seleccionada td {
+    font-size: 12px;
+}
+#info-venta-seleccionada {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+@media (max-width: 900px) {
+    #panel-filtros-facturacion {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambiar de cajero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_cajeros.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Cambio de cajero</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="administrar.html"><span>Administrar</span></a>
+                <a class="btn-menu" href="inventarios.html"><span>Inventarios</span></a>
+                <a class="btn-menu" href="facturacion.html"><span>Facturación</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            <section class="panel" id="panel-cambio-cajero">
+                <h3 class="texto-centro margen-inferior">Seleccionar cajero activo</h3>
+
+                <form id="form-cambiar-cajero">
+                    <div class="fila-detalle">
+                        <label for="cajero-actual">Cajero actual:</label>
+                        <span class="valor-num" id="cajero-actual">Ninguno</span>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="lista-cajeros">Nuevo cajero:</label>
+                        <select id="lista-cajeros" name="cajero" required>
+                            
+                        </select>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="clave-cajero">Contraseña del cajero:</label>
+                        <input type="password" id="clave-cajero" name="clave" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <button type="submit" class="btn-primario" id="btn-confirmar-cambio">
+                            Confirmar cambio
+                        </button>
+                        <button type="button" id="btn-cancelar-cambio">
+                            Cancelar
+                        </button>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-error" id="mensaje-error-cajero" style="display:none;">
+                        <span>Datos incorrectos o cajero inactivo.</span>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-info" id="mensaje-ok-cajero" style="display:none;">
+                        <span>Cambio de cajero realizado. Puede volver a la pantalla de ventas.</span>
+                    </div>
+                </form>
+
+                <div class="fila-detalle margen-superior">
+                    <a href="index.html">Volver a pantalla de ventas</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/cajeros.js"></script>
+</body>
+</html>

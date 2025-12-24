@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturación - Ventas realizadas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_facturacion.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Historial de ventas</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="cajeros.html"><span>Cajeros</span></a>
+                <a class="btn-menu" href="inventarios.html"><span>Inventarios</span></a>
+                <a class="btn-menu" href="administrar.html"><span>Administrar</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            
+            <section class="panel" id="panel-filtros-facturacion">
+                <h3 class="texto-centro margen-inferior">Filtros de búsqueda</h3>
+
+                <form id="form-filtros-ventas">
+                    <div class="fila-detalle">
+                        <label for="filtro-fecha-desde">Fecha desde:</label>
+                        <input type="date" id="filtro-fecha-desde" name="desde">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="filtro-fecha-hasta">Fecha hasta:</label>
+                        <input type="date" id="filtro-fecha-hasta" name="hasta">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="filtro-cajero">Cajero:</label>
+                        <select id="filtro-cajero" name="cajero">
+                            <option value="">Todos</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="filtro-num-venta">Num. de venta:</label>
+                        <input type="text" id="filtro-num-venta" name="num_venta">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <button type="submit" class="btn-primario">
+                            Aplicar filtros
+                        </button>
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            
+            <section class="panel" id="panel-tabla-ventas">
+                <h3 class="texto-centro margen-inferior">Ventas registradas</h3>
+
+                <table id="tabla-ventas">
+                    <thead>
+                    <tr>
+                        <th>Num. venta</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Cajero</th>
+                        <th>Cliente</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+
+                <div class="fila-detalle margen-superior">
+                    <label>Total de ventas mostradas:</label>
+                    <span class="valor-num" id="total-ventas-mostradas">0</span>
+                </div>
+
+                <div class="fila-detalle margen-superior">
+                    <label>Suma de importes:</label>
+                    <span class="valor-num" id="suma-importes">0.00</span>
+                </div>
+            </section>
+
+            
+            <section class="panel" id="panel-detalle-venta-seleccionada">
+                <h3 class="texto-centro margen-inferior">Detalle de venta seleccionada</h3>
+
+                <p id="info-venta-seleccionada">
+                    No hay ninguna venta seleccionada.
+                </p>
+
+                <table id="tabla-detalle-venta-seleccionada">
+                    <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Cant</th>
+                        <th>Precio unitario</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/facturacion.js"></script>
+</body>
+</html>

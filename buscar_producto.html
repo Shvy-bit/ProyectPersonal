@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_buscar.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Buscar producto</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="cajeros.html"><span>Cajeros</span></a>
+                <a class="btn-menu" href="inventarios.html"><span>Inventarios</span></a>
+                <a class="btn-menu" href="facturacion.html"><span>Facturación</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            
+            <section class="panel" id="panel-busqueda-productos">
+                <h3 class="texto-centro margen-inferior">Filtro de búsqueda</h3>
+
+                <form id="form-buscar-productos">
+                    <div class="fila-detalle">
+                        <label for="buscar-texto">Nombre o descripción:</label>
+                        <input type="text" id="buscar-texto" name="texto">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="buscar-codigo">Código de barras:</label>
+                        <input type="text" id="buscar-codigo" name="codigo">
+                    </div>
+
+                    <div class="fila-detalle">
+                        <button type="submit" class="btn-primario">
+                            Buscar
+                        </button>
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            
+            <section class="panel" id="panel-resultados-productos">
+                <h3 class="texto-centro margen-inferior">Resultados</h3>
+
+                <p class="texto-centro margen-inferior">
+                    Seleccione un producto y presione Enter para enviar el código de barras a la pantalla de ventas.
+                </p>
+
+                <table id="tabla-buscar-productos">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Código de barras</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio unidad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                         Cada fila deberá permitir selección con teclado (Enter). -->
+                    </tbody>
+                </table>
+
+                <div class="fila-detalle margen-superior">
+                    <span id="info-seleccion">
+                        Ningún producto seleccionado.
+                    </span>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/buscar_producto.js"></script>
+</body>
+</html>

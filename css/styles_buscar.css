@@ -1,0 +1,42 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#panel-busqueda-productos {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#panel-busqueda-productos form {
+    margin-top: 8px;
+}
+
+#panel-resultados-productos {
+    margin-top: 5px;
+}
+
+#tabla-buscar-productos th,
+#tabla-buscar-productos td {
+    font-size: 12px;
+}
+
+#tabla-buscar-productos tbody tr:hover {
+    background-color: #e1ecff;
+    cursor: pointer;
+}
+
+#tabla-buscar-productos tbody tr.seleccionado {
+    background-color: #c2d6ff;
+}
+
+#info-seleccion {
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    #panel-busqueda-productos {
+        max-width: 100%;
+    }
+}

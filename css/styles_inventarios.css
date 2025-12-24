@@ -1,0 +1,58 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#panel-filtros-inventario {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#panel-filtros-inventario form {
+    margin-top: 8px;
+}
+
+#panel-tabla-inventario {
+    margin-top: 5px;
+}
+
+#tabla-inventario th,
+#tabla-inventario td {
+    font-size: 12px;
+}
+
+#tabla-inventario tbody tr.inventario-bajo {
+    background-color: #ffecec;
+}
+
+#panel-acciones-inventario {
+    margin-top: 5px;
+}
+
+#panel-acciones-inventario .fila-detalle {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#btn-agregar-producto,
+#btn-editar-producto,
+#btn-eliminar-producto {
+    min-width: 180px;
+}
+
+#mensaje-inventario span {
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    #panel-filtros-inventario {
+        max-width: 100%;
+    }
+
+    #btn-agregar-producto,
+    #btn-editar-producto,
+    #btn-eliminar-producto {
+        width: 100%;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrar Cajeros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="css/styles_base.css">
+    <link rel="stylesheet" href="css/styles_admin.css">
+</head>
+<body>
+<div class="ventana">
+    <header class="encabezado">
+        <h1 class="titulo-sistema">SISTEMA DE PUNTO DE VENTA</h1>
+        <h2 class="subtitulo">Administración de Cajeros</h2>
+    </header>
+
+    <div class="contenedor">
+        
+        <aside class="menu-lateral">
+            <div class="menu-titulo">Menú</div>
+
+            <nav class="menu-opciones">
+                <a class="btn-menu" href="index.html"><span>Ventas</span></a>
+                <a class="btn-menu" href="cajeros.html"><span>Cajeros</span></a>
+                <a class="btn-menu" href="inventarios.html"><span>Inventarios</span></a>
+                <a class="btn-menu" href="facturacion.html"><span>Facturación</span></a>
+                <a class="btn-menu" href="administrar.html"><span>Salir admin</span></a>
+            </nav>
+        </aside>
+
+        
+        <main class="principal">
+            
+            <section class="panel" id="panel-resumen-cajeros">
+                <div class="fila-detalle">
+                    <label>Total de cajeros registrados:</label>
+                    <span class="valor-num" id="total-cajeros">0</span>
+                </div>
+                <div class="fila-detalle">
+                    <button type="button" class="btn-primario" id="btn-nuevo-cajero">
+                        Agregar cajero
+                    </button>
+                </div>
+            </section>
+
+            
+            <section class="panel" id="panel-tabla-cajeros">
+                <h3 class="texto-centro margen-inferior">Listado de cajeros</h3>
+
+                <table id="tabla-cajeros">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Nombre completo</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </section>
+
+            
+            <section class="panel" id="panel-form-cajero">
+                <h3 class="texto-centro margen-inferior" id="titulo-form-cajero">
+                    Nuevo cajero
+                </h3>
+
+                <form id="form-cajero">
+                    <input type="hidden" id="cajero-id" name="id">
+
+                    <div class="fila-detalle">
+                        <label for="cajero-usuario">Usuario de cajero:</label>
+                        <input type="text" id="cajero-usuario" name="usuario" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="cajero-nombre">Nombre completo:</label>
+                        <input type="text" id="cajero-nombre" name="nombre" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="cajero-clave">Contraseña:</label>
+                        <input type="password" id="cajero-clave" name="clave" required>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <label for="cajero-estado">Estado:</label>
+                        <select id="cajero-estado" name="estado">
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+
+                    <div class="fila-detalle">
+                        <button type="submit" class="btn-primario" id="btn-guardar-cajero">
+                            Guardar
+                        </button>
+                        <button type="button" id="btn-cancelar-edicion">
+                            Cancelar
+                        </button>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-error" id="mensaje-error-cajero" style="display:none;">
+                        <span id="texto-error-cajero">Error al guardar cajero.</span>
+                    </div>
+
+                    <div class="fila-detalle alerta alerta-info" id="mensaje-ok-cajero" style="display:none;">
+                        <span id="texto-ok-cajero">Cajero guardado correctamente.</span>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</div>
+
+
+<script src="js/admin_cajeros.js"></script>
+</body>
+</html>
